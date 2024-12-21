@@ -18,7 +18,8 @@ pipeline {
 
         stage('Code Scan') {
             steps {
-                echo 'code scan'
+                sh '''cd app
+                sonar-scanner   -Dsonar.projectKey=simple-apps   -Dsonar.sources=.   -Dsonar.host.url=http://172.23.1.21:9000   -Dsonar.login=sqp_0c356ab294c4fa2284fdf6160ad53b2377d59e98'''
             }
         }
 
