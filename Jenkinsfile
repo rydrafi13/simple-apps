@@ -11,7 +11,8 @@ pipeline {
 
         stage('Testing Apps') {
             steps {
-                echo 'test apps'
+                sh '''cd app
+                npm test'''
             }
         }
 
