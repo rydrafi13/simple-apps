@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'devops1-rafi' }
 
     stages {
         stage('Build Apps') {
