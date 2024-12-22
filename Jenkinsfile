@@ -39,7 +39,8 @@ pipeline {
 
         stage('Deploy Apps') {
             steps {
-                echo 'deploy apps'
+                sh '''
+                docker compose up -d'''
             }
         }
     }
